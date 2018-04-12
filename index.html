@@ -159,7 +159,7 @@
 			$(function(){ 
 				$("#posts").append("<div id='loading' class='text-center'>数据加载中...</div>")
 				$.getJSON("posts/data.json",function(blogs){
-					$("#posts").find(".loading").remove();
+					$("#loading").remove();
 					reader = new ArtReader(blogs);
 					reader.init();
 					debugger
