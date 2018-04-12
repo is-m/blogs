@@ -65,7 +65,7 @@
 			  
 			</ul>
 		</div>
-		<button id="btnExpand" class="btn btn-primary">加载更多</button>
+		<button id="btnExpand" class="btn btn-primary" style="display:none;">加载更多</button>
 	</div>
 		
 	<footer class="footer">
@@ -130,7 +130,10 @@
 					if(lastIndex >= this.maxLength ){
 						lastIndex = this.maxLength;
 						this.$btnExpand.hide();
+					}else{
+						this.$btnExpand.show();
 					}
+					
 					for(;this.curIndex<lastIndex;this.curIndex++){
 						var blog = this.blogs[this.curIndex];
 						html.push('<li class="media">');
