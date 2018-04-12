@@ -145,8 +145,10 @@
 							html.push(blog.tags[i]);
 							html.push('</span>')
 						} 
+						html.push('<span class="pull-right">');
 						html.push("posted ");
 						html.push(new Date(blog.time).toGMTString());
+						html.push('</span>');
 						html.push('</div>');
 						
 						html.push('</div>');
