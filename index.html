@@ -140,9 +140,14 @@
 						html.push(' <h5 class="mt-0 mb-1">'+blog.title+'</h5>');
 						html.push(blog.desc);
 						html.push('</div>');
-						html.push('<div class="media-footer">');
+						html.push('<div class="media-footer">'); 
+						for(var i=0;i<blog.tags.length;i++){
+							html.push('<span class="badge badge-dark">');
+							html.push(blog.tags[i]);
+							html.push('</span>')
+						} 
 						html.push("posted ");
-						html(new Date(blog.time));
+						html.push(new Date(blog.time));
 						html.push('</div>');
 						html.push('</li>'); 
 					}
