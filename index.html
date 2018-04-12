@@ -133,13 +133,16 @@
 			};
 			
 			ArtReader.prototype.init = function(){
-				!this.inited && this.expand(); 
-				this.inited = true;
+				if(!this.inited){
+					var self = this;
+					this.expand();
+					this.$btnExpand.click(self.expand); 
+					this.inited = true;
+				}
 			};
 			
 			ArtReader.prototype.expand = function(){
 				var html = [];
-				v
 				if(this.curIndex < this.maxLength){
 					var lastIndex=this.curIndex+10;
 					if(lastIndex > this.maxLength){
