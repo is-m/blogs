@@ -129,7 +129,7 @@
 					var lastIndex=this.curIndex+10;
 					if(lastIndex >= this.maxLength ){
 						lastIndex = this.maxLength;
-						this.$btnExpand.attr("diabled","diabled");
+						this.$btnExpand.hide();
 					}
 					for(;this.curIndex<lastIndex;this.curIndex++){
 						var blog = this.blogs[this.curIndex];
@@ -145,6 +145,7 @@
 							html.push(blog.tags[i]);
 							html.push('</span>')
 						} 
+						
 						html.push('<span class="pull-right">');
 						html.push("posted ");
 						html.push(new Date(blog.time).toGMTString());
